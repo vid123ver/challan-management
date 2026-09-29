@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
 
+const API_URL =
+  import.meta.env.VITE_API_URL || "http://localhost:5005";
+
 function App() {
   const [searchType, setSearchType] = useState("challan");
   const [challanNumber, setChallanNumber] = useState("");
@@ -32,7 +35,7 @@ function App() {
       let url = "";
 
       if (searchType === "challan") {
-        url = `http://localhost:5005/api/challans/${challanNumber.trim()}`;
+        url = `${API_URL}/api/challans/${challanNumber.trim()}`;
       } else {
         const params = new URLSearchParams();
 
@@ -44,7 +47,7 @@ function App() {
           params.append("court", court.trim());
         }
 
-        url = `http://localhost:5005/api/challans/search?${params.toString()}`;
+        url = `${API_URL}/api/challans/search?${params.toString()}`;
       }
 
       const response = await fetch(url);

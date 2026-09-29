@@ -9,7 +9,8 @@ The project extracts challan data, validates it, stores it in MongoDB, and provi
 - Extract and validate challan data from PDF
 - Store data in MongoDB
 - Search by Challan Number
-- Search by Vehicle Number and Court
+- Search by Vehicle Number
+- Search by Court
 - View complete challan details
 - REST API using Node.js and Express.js
 - React frontend
@@ -64,7 +65,6 @@ challan-management/
 │       └── challans.json
 │
 ├── extraction/
-│   ├── test_pdf.py
 │   ├── extract_challans.py
 │   ├── validate_challans.py
 │   └── inspect_vehicle_warnings.py

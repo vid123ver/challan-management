@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
     res.json({
-        message: " hello Challan Management API is running"
+        message: "Challan Management API is running"
     });
 });
 
